@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+.env
+.conda_env
+Anaconda Prompt (Miniconda3).lnk
+environment.yml

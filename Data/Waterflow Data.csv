@@ -1,0 +1,37 @@
+River,Route Start,Route End,Route Length,Route Start GPS N,Route Start GPS E,Route End GPS N,Route End GPS E,Treshold Easy,Treshold Doable,Measuring Point,Measuring Point ID,Has Data,Measuring Point Link,Measuring Point GPS N,Measuring Point GPS E
+Vantaanjoki,Riihimäki,Kytäjä (Hyvinkää),17,6734955.151,379035.211,6722457.151,379610.211,2,0.6,Vantaanjoki Paloheimo,3068,No,http://wwwi2.ymparisto.fi/i2/21/q2100210y/wqfi.html,6734418,378788
+Vantaanjoki,Kytäjä (Hyvinkää),Nukarinkoski,16.5,6722457.151,379610.211,6712394.107,385628.795,20,6,Myllymäki,1090,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2101220y/wqfi.html,6686323,382000
+Vantaanjoki,Nukarinkoski,Myllykoski,11.5,6711529.069,385580.771,6704209.81,381875.562,20,6,Myllymäki,1090,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2101220y/wqfi.html,6686323,382000
+Vantaanjoki,Myllykoski,Vantaankoski,29,6703850.81,381970.562,6686387.121,382009.203,10,4,Myllymäki,1090,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2101220y/wqfi.html,6686323,382000
+Vantaanjoki,Vantaankoski,Vanhankaupunginkoski,16.5,6685961.121,382125.203,6677338.451,388047.377,8,4,Myllymäki,1090,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2101220y/wqfi.html,6686323,382000
+Siuntionjoki,Nummela (Enäjärvi),Karhujärvi,25,6691478.451,353111.377,6681699.423,350507.924,,1,Poikkipuoliain,3176,No,http://wwwi2.ymparisto.fi/i2/22/l220041008y/wqfi.html,6691434,358497
+Siuntionjoki,Karhujärvi,Myllykylä,5,6681699.423,350507.924,6678688.881,347554.517,1,1,Siuntionjoki,1099 - OK,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/22/q2200620y/wqfi.html,6670414,346445
+Siuntionjoki,Myllykylä,Kirkkojoki,6.5,6678713.881,347405.517,6674598.215,345720.565,2,2,Siuntionjoki,1099,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/22/q2200620y/wqfi.html,6670414,346445
+Siuntionjoki,Kirkkojoki,Pikkalanlahti,13.5,6674598.215,345720.565,6664186.594,350171.712,0,0,,,,,,
+Keravanjoki,Ridasjärvi,Kellokoski,19,6724630.57,390815.261,6712140.326,396088.163,,1.5,Ridasjärvi,3257,Odata,http://wwwi2.ymparisto.fi/i2/21/l210941001y/wqfi.html,6723029,390744
+Keravanjoki,Kellokoski,Lemmenlaakso-ylä,9,6711784.326,396056.163,6707123.235,398423.698,4,1,Hanala,2135,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/21/q2101520y/wqfi.html,6688587,394255
+Keravanjoki,Lemmenlaakso-ylä,Lemmenlaakso-ala,4,6707123.235,398423.698,6705240.439,398124.869,,8,Hanala,2135,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/21/q2101520y/wqfi.html,6688587,394255
+Keravanjoki,Lemmenlaakso-ala,Kerava,10,6705240.439,398124.869,6698404.448,396626.897,2,1,Hanala,2135,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/21/q2101520y/wqfi.html,6688587,394255
+Keravanjoki,Kerava,Korso (Jokivarsi),7.5,6698404.448,396626.897,6691452.626,396484.475,2,1,Hanala,2135,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/21/q2101520y/wqfi.html,6688587,394255
+Keravanjoki,Korso (Jokivarsi),Heureka,11,6691452.626,396484.475,6685244.916,391917.211,,4,Hanala,2135,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/21/q2101520y/wqfi.html,6688587,394255
+Keravanjoki,Heureka,Vanhankaupunginkoski,12.5,6685232.916,391713.211,6677338.451,388047.377,0,0,,,,,,
+Espoonjoki,Glims/Gloms-risteys,Espoon kirkko,2,6677688.29,371182.42,6676984.881,369987.603,1.6,0.6,Espoonjoki Kauklahti,3005,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/81/q8102800y/wqfi.html,6674534,366548
+Espoonjoki,Espoon kirkko,Kauklahdenkoski,4.5,6676984.881,369987.603,6674427.414,366478.029,1.6,0.6,Espoonjoki Kauklahti,3005,Karttapalvelu,http://wwwi2.ymparisto.fi/i2/81/q8102800y/wqfi.html,6674534,366548
+Espoonjoki,Kauklahdenkoski,Espoonlahti,2,6674427.414,366478.029,6673225.414,365632.029,0,0,,,,,,
+Brobackanjoki–Mankinjoki,Nuuksion Pitkäjärvi,Dämmanin vedenpuhdistuslaitos,6,6681885.672,366714.824,6678224.523,367121.274,5,1.5,"Mankinjoki, kehä III silta",3004,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/81/q8102900y/wqfi.html,6675625,366030
+Brobackanjoki–Mankinjoki,Dämmanin vedenpuhdistuslaitos,Espoonlahti,9,6678321.523,367137.274,6673318.716,365133.389,,1.5,"Mankinjoki, kehä III silta",3004,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/81/q8102900y/wqfi.html,6675625,366030
+Lepsämänjoki,Lakiston/Härkälänjoen risteys,Luhtajoki-risteys,14.5,6694529.689,370720.536,6692217.057,377884.724,5,2,Lepsämänjoki,3018,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2104900y/wqfi.html,6690506,376269
+Lepsämänjoki,Luhtajoki-risteys,liittyminen Vantaanjokeen,2.5,6692217.057,377884.724,6692052.024,379857.182,0,0,,,,,,
+Luhtajoki,Pohjois-Nurmijärvi,Kuhakoski,15.5,6708763.265,377513.351,6701783.001,374098.184,3,1,Luhtajoki,3015,No,http://wwwi2.ymparisto.fi/i2/21/q2104700y/wqfi.html,6692514,377872
+Luhtajoki,Kuhakoski,liittyminen Lepsämänjokeen,14.5,6701783.001,374098.184,6692217.057,377884.724,3,1,Luhtajoki,3015,No,http://wwwi2.ymparisto.fi/i2/21/q2104700y/wqfi.html,6692514,377872
+Tuusulanjoki,Tuusulanjärvi,liittyminen Vantaanjokeen,15,6698013.712,390990.361,6690470.615,383708.897,,3,Tuusulanjoki,3308,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2105400y/wqfi.html,6692011,386449
+Lakistonjoki,Velskola,Lepsämänjoki,8,6688543.772,369146.164,6694488.623,370715.625,,4,Lepsämänjoki,3018,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2104900y/wqfi.html,6690506,376269
+Härkälänjoki,Salmijärvi,Härkälän silta,2.3,6695751.941,362247.558,6697159.941,363299.558,-1,-1,,,,,,
+Härkälänjoki,Härkälän silta,Lepsämänjoki,12.7,6697159.941,363299.558,6694650.451,370707.583,,2,Sandbacka,1089,Karttapalvelu / Odata,http://wwwi2.ymparisto.fi/i2/21/q2100946y/wqfi.html,6694210,369862
+Glimsinjoki,Pitkäjärvi,Vanha Turuntie,3,6679930.671,373349.595,6678499.27,371578.283,,,Espoon Pitkäjärvi,,No,http://wwwi2.ymparisto.fi/i2/81/l810551010y/wqfi.html,,
+Glimsinjoki,Vanha Turuntie,Espoonjoki,1.5,6678499.27,371578.283,6677692.822,371161.272,,1,"Espoonjoki, moottoritien silta",,No,http://wwwi2.ymparisto.fi/i2/81/q8102850y/wqfi.html,6677571,370716
+Kauhalanjoki,Hauklampi (Kauhala),Kauhalan ulkoilualueen eteläraja,3,6682373.938,361823.005,6680087.303,360996.551,,,,,,,,
+Kauhalanjoki,Kauhalan ulkoilualueen eteläraja,Liittyminen Brobackanjokeen,9,6680087.303,360996.551,6675842.004,366043.021,,,,,,,,
+Glomsinjoki,Bodominjärvi,Espoonjoki,5,6680868.852,370311.085,6677692.822,371161.272,,,,,,,,
+Myllypuro,Paikka Takalan laavun lähellä,Nuuksion Pitkäjärvi,6,6691270.424,361929.218,6687904.416,363956.657,,,,,,,,
+Sahaoja,Sahajärvi,Nuuksion Pitkäjärvi,3,6683818.323,364999.616,6682165.458,366649.251,,,,,,,,
