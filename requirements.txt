@@ -1,7 +1,5 @@
 streamlit
 streamlit-folium
-matplotlib
 numpy
 pandas
 folium
-geopandas
