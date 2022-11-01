@@ -4,24 +4,36 @@ from streamlit_folium import st_folium
 import folium
 import pandas as pd
 import coordinates
-from folium.plugins import Draw
 import json
 
-
-### Reading data
+# Reading data
 preds_df = pd.read_csv("Data/year_predictions.csv", sep=",")
 waterflow_df = pd.read_csv("Data/Waterflow Data.csv")
 
-### Building the side bar
+# Route Data
+routes = []
+for i in range(0, 6):
+    with open("Data/Routepoints/routepoints_" + str(i) + ".geojson") as f:
+        route = json.load(f)
+    all_coordinates = []
+        
+    for feature in route["features"]:
+        coords = [(coord[1], coord[0]) for coord in feature["geometry"]["coordinates"]]
+        all_coordinates = all_coordinates + coords
+    
+    routes.append(all_coordinates)
+
+# Building the side bar
 with st.sidebar:
     st.title('WaterFlows')
-    st.write("A Dashboard to check the status of canoeing routes. Start by picking a date.")
-    
+    st.write(
+        "A Dashboard to check the status of canoeing routes. Start by picking a date.")
+
     date_picker = st.date_input(
         "Select Date",
         min_value=datetime.date.today(),
         max_value=datetime.date.today()+datetime.timedelta(days=365))
-    
+
     toggle_map = st.radio(
         "Map Type",
         ('Color', 'Grey'),
@@ -35,39 +47,50 @@ with st.sidebar:
     st.write("Red = Impossible")
 
 
-### Building the map
+# Building the map
 if toggle_map == "Color":
     map_tiles = "OpenStreetMap"
 else:
     map_tiles = "CartoDB Positron"
-m = folium.Map([60.30246404560092, 24.85931396484375], zoom_start=9, tiles=map_tiles)
+    
+m = folium.Map([60.30246404560092, 24.85931396484375],
+               zoom_start=9, tiles=map_tiles)
+
+# Draw plugin for map
+folium.plugins.Draw(export=True).add_to(m)
 
 
-### Drawing routes and coloring with predictions
-day_prediction = preds_df[preds_df["date"]==str(date_picker)]["predicted_mean"].values[0]
-for i in range(0,5):
-    with open("Data/Routepoints/routepoints_" + str(i)+ ".geojson") as f:
-        routepoints_json = json.load(f)
+# Drawing routes and coloring with predictions
+day_prediction = preds_df[preds_df["date"] ==str(date_picker)]["predicted_mean"].values[0]
 
-    color = "grey"
-    if day_prediction >= waterflow_df.at[i, "Treshold Easy"]:
+for i in range(0, 6):
+    if i > 4:
+        color = "grey"
+    elif day_prediction >= waterflow_df.at[i, "Treshold Easy"]:
         color = "green"
     elif day_prediction >= waterflow_df.at[i, "Treshold Doable"]:
         color = "yellow"
     else:
         color = "red"
 
-    route = folium.GeoJson(routepoints_json, style_function= lambda x: {"color":color, "weight":"5"}).add_to(m)
+    folium.vector_layers.PolyLine(
+        locations = routes[i],
+        color=color,
+        weight=5
+    ).add_to(m)
 
 
-### Add route markers
+# Add route markers
 start_coords = waterflow_df[["Route Start GPS N", "Route Start GPS E", "Route Start"]].rename(
-    columns={"Route Start GPS N": "N", "Route Start GPS E": "E", "Route Start": "Name"}
-    ).to_dict("records")
+    columns={"Route Start GPS N": "N",
+             "Route Start GPS E": "E",
+             "Route Start": "Name"}
+).to_dict("records")
 
 end_coords = waterflow_df[["Route End GPS N", "Route End GPS E", "Route End"]].rename(
-    columns={"Route End GPS N": "N", "Route End GPS E": "E", "Route End": "Name"}
-    ).to_dict("records")
+    columns={"Route End GPS N": "N",
+             "Route End GPS E": "E", "Route End": "Name"}
+).to_dict("records")
 
 coords = start_coords + end_coords
 
@@ -85,5 +108,5 @@ for coord in coords:
         fill_opacity=1.0
     ).add_to(m)
 
-### Call to render Folium map in Streamlit
-st_data = st_folium(m, width = 1000, height=800)
+# Call to render Folium map in Streamlit
+st_data = st_folium(m, width=1000, height=800)
