@@ -6,13 +6,17 @@ import pandas as pd
 import coordinates
 import json
 
+#TODO: precalculate wsg84 coords for route markers
+
 # Reading data
 preds_df = pd.read_csv("Data/year_predictions.csv", sep=",")
 waterflow_df = pd.read_csv("Data/Waterflow Data.csv")
 
 # Route Data
+n_of_routes = 35
+
 routes = []
-for i in range(0, 6):
+for i in range(0, n_of_routes+1):
     with open("Data/Routepoints/routepoints_" + str(i) + ".geojson") as f:
         route = json.load(f)
     all_coordinates = []
@@ -62,9 +66,10 @@ m = folium.Map([60.30246404560092, 24.85931396484375],
 
 
 # Drawing routes and coloring with predictions
-day_prediction = preds_df[preds_df["date"] ==str(date_picker)]["predicted_mean"].values[0]
+# TODO: treshold 0 = always availabe
+day_prediction = preds_df[preds_df["date"] == str(date_picker)]["predicted_mean"].values[0]
 
-for i in range(0, 6):
+for i in range(0, n_of_routes+1):
     if i > 4:
         color = "grey"
     elif day_prediction >= waterflow_df.at[i, "Treshold Easy"]:
