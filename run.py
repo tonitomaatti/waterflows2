@@ -45,6 +45,7 @@ with st.sidebar:
     st.write("Green = Easy")
     st.write("Yellow = Doable")
     st.write("Red = Impossible")
+    st.write("Grey = No Data")
 
 
 # Building the map
@@ -57,7 +58,7 @@ m = folium.Map([60.30246404560092, 24.85931396484375],
                zoom_start=9, tiles=map_tiles)
 
 # Draw plugin for map
-folium.plugins.Draw(export=True).add_to(m)
+#folium.plugins.Draw(export=True).add_to(m)
 
 
 # Drawing routes and coloring with predictions
