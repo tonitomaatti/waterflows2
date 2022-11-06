@@ -6,8 +6,6 @@ import pandas as pd
 import coordinates
 import json
 
-#TODO: precalculate wsg84 coords for route markers
-
 # Reading data
 preds_df = pd.read_csv("Data/year_predictions.csv", sep=",")
 waterflow_df = pd.read_csv("Data/Waterflow Data.csv")
@@ -87,27 +85,22 @@ for i in range(0, n_of_routes+1):
 
 
 # Add route markers
-start_coords = waterflow_df[["Route Start GPS N", "Route Start GPS E", "Route Start"]].rename(
-    columns={"Route Start GPS N": "N",
-             "Route Start GPS E": "E",
-             "Route Start": "Name"}
+start_coords = waterflow_df[["Route Start WGS84 La", "Route Start WGS84 Lo", "Route Start"]].rename(
+    columns={"Route Start WGS84 La": "La", "Route Start WGS84 Lo": "Lo", "Route Start": "Name"}
 ).to_dict("records")
 
-end_coords = waterflow_df[["Route End GPS N", "Route End GPS E", "Route End"]].rename(
-    columns={"Route End GPS N": "N",
-             "Route End GPS E": "E", "Route End": "Name"}
+end_coords = waterflow_df[["Route End WGS84 La", "Route End WGS84 Lo", "Route End"]].rename(
+    columns={"Route End WGS84 La": "La", "Route End WGS84 Lo": "Lo", "Route End": "Name"}
 ).to_dict("records")
 
 coords = start_coords + end_coords
 
 for coord in coords:
-    route_name = coord.pop("Name", None)
-    coords_wgs84 = coordinates.ETRSTM35FINxy_to_WGS84lalo(coord)
     folium.vector_layers.Circle(
-        location=(coords_wgs84["La"], coords_wgs84["Lo"]),
+        location=(coord["La"], coord["Lo"]),
         radius=1,
         popup=None,
-        tooltip=route_name,
+        tooltip=coord["Name"],
         weight=5,
         color="black",
         fill_color="purple",
