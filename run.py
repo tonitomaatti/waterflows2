@@ -3,7 +3,6 @@ import datetime
 from streamlit_folium import st_folium
 import folium
 import pandas as pd
-import coordinates
 import json
 
 # Reading data
